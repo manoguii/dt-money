@@ -23,7 +23,7 @@ export const NewTranslationButton = styled.button`
   color: ${(props) => props.theme.white};
   font-weight: bold;
   padding: 0 1.25rem;
-  border-radius: 6px;
+  border-radius: 25px;
   cursor: pointer;
 
   &:hover {

@@ -19,8 +19,9 @@ interface SummaryCardProps {
 
 export const SummaryCard = styled.div<SummaryCardProps>`
   background: ${(props) => props.theme['gray-600']};
-  border-radius: 6px;
-  padding: 2rem;
+  border-radius: 25px;
+  padding: 1.5rem;
+  align-self: center;
 
   header {
     display: flex;

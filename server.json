@@ -47,6 +47,30 @@
       "type": "income",
       "created_at": "2022-09-28T00:05:29.871Z",
       "id": 6
+    },
+    {
+      "description": "Curso",
+      "price": 230,
+      "category": "Estudos",
+      "type": "income",
+      "created_at": "2022-10-23T22:34:08.089Z",
+      "id": 7
+    },
+    {
+      "description": "Patel",
+      "price": 12,
+      "category": "Alimentação",
+      "type": "outcome",
+      "created_at": "2022-10-28T23:08:52.644Z",
+      "id": 8
+    },
+    {
+      "description": "PG",
+      "price": 1200,
+      "category": "Salario",
+      "type": "income",
+      "created_at": "2022-10-28T23:09:32.411Z",
+      "id": 9
     }
   ]
 }
