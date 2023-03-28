@@ -14,15 +14,24 @@
 
 ## Instalação
 
+- Clone o repositório
 ```bash
-# Clone o repositório
 $ git clone https://github.com/manoguii/dt-money.git
-# Entre no repositório
-$ cd dt-money
-# Criar as variáveis ambiente em
+```
+
+- Instale as dependências
+```bash
 $ npm install
-# Execute a aplicação
-$ npm run start
+```
+
+- Execute o banco de dados
+```bash
+$ npm run dev:server
+```
+
+- Execute a aplicação
+```bash
+$ npm run dev
 ```
 
 ## Sobre
@@ -32,12 +41,9 @@ O dt-money é um projeto para gerenciar despesas e receitas. 🚀
 
 ## Tecnologias utilizadas 👩🏻‍💻
 
-<div style="display:flex!important;">
-<a href="https://reactjs.org/"><img align="center" alt="Hideki-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"></a>
-<a href="https://www.typescriptlang.org/"><img align="center" alt="Hideki-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"></a>
-<a href="https://nextjs.org/"><img align="center" alt="Hideki-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"></a>
-</div>
-  
-##
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
 
 <p align="center">Made with 💙 by Guilherme David</p>
