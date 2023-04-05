@@ -1,5 +1,10 @@
+import * as z from 'zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useContext } from 'react'
+import { TransactionContext } from '../../contexts/TransactionsContexts'
 import {
   CloseButton,
   Content,
@@ -7,11 +12,6 @@ import {
   TransactionType,
   TransactionTypeButton,
 } from './styles'
-import { useForm, Controller } from 'react-hook-form'
-import * as z from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useContext } from 'react'
-import { TransactionContext } from '../../contexts/TransactionsContexts'
 
 const newTransitionSchema = z.object({
   category: z.string(),
