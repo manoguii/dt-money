@@ -3,7 +3,6 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useContext } from 'react'
 import { TransactionContext } from '../../contexts/TransactionsContexts'
 import {
   CloseButton,
@@ -12,6 +11,7 @@ import {
   TransactionType,
   TransactionTypeButton,
 } from './styles'
+import { useContextSelector } from 'use-context-selector'
 
 const newTransitionSchema = z.object({
   category: z.string(),
@@ -23,7 +23,13 @@ const newTransitionSchema = z.object({
 type NewTransactionsFormInput = z.infer<typeof newTransitionSchema>
 
 export function NewTransactionsModal() {
-  const { createTransactions } = useContext(TransactionContext)
+  const createTransactions = useContextSelector(
+    TransactionContext,
+    // O callback do useContextSelector recebe o contexto, e retorna as informações que eu quero monitorar do contexto para evitar renderizações desnecessárias de um componente.
+    (context) => {
+      return context.createTransactions
+    },
+  )
 
   const {
     reset,
@@ -45,6 +51,7 @@ export function NewTransactionsModal() {
       category: data.category,
       type: data.type,
     })
+
     reset()
   }
 
@@ -91,6 +98,7 @@ export function NewTransactionsModal() {
                     <ArrowCircleUp size={24} />
                     Entrada
                   </TransactionTypeButton>
+
                   <TransactionTypeButton variant="outcome" value="outcome">
                     <ArrowCircleDown size={24} />
                     Saída

@@ -13,6 +13,7 @@ export function Header() {
           <Dialog.Trigger asChild>
             <NewTranslationButton>Nova transação</NewTranslationButton>
           </Dialog.Trigger>
+
           <NewTransactionsModal />
         </Dialog.Root>
       </HeaderContent>
