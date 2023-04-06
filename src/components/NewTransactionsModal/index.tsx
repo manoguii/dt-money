@@ -1,5 +1,10 @@
+import * as z from 'zod'
 import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { TransactionContext } from '../../contexts/TransactionsContexts'
+import { useContextSelector } from 'use-context-selector'
 import {
   CloseButton,
   Content,
@@ -7,11 +12,7 @@ import {
   TransactionType,
   TransactionTypeButton,
 } from './styles'
-import { useForm, Controller } from 'react-hook-form'
-import * as z from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useContext } from 'react'
-import { TransactionContext } from '../../contexts/TransactionsContexts'
+import { memo } from 'react'
 
 const newTransitionSchema = z.object({
   category: z.string(),
@@ -22,8 +23,14 @@ const newTransitionSchema = z.object({
 
 type NewTransactionsFormInput = z.infer<typeof newTransitionSchema>
 
-export function NewTransactionsModal() {
-  const { createTransactions } = useContext(TransactionContext)
+function NewTransactionsModalComponent() {
+  const createTransactions = useContextSelector(
+    TransactionContext,
+    // O callback do useContextSelector recebe o contexto, e retorna as informações que eu quero monitorar do contexto para evitar renderizações desnecessárias de um componente.
+    (context) => {
+      return context.createTransactions
+    },
+  )
 
   const {
     reset,
@@ -45,6 +52,7 @@ export function NewTransactionsModal() {
       category: data.category,
       type: data.type,
     })
+
     reset()
   }
 
@@ -91,6 +99,7 @@ export function NewTransactionsModal() {
                     <ArrowCircleUp size={24} />
                     Entrada
                   </TransactionTypeButton>
+
                   <TransactionTypeButton variant="outcome" value="outcome">
                     <ArrowCircleDown size={24} />
                     Saída
@@ -107,3 +116,5 @@ export function NewTransactionsModal() {
     </Dialog.Portal>
   )
 }
+
+export const NewTransactionsModal = memo(NewTransactionsModalComponent)

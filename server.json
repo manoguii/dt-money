@@ -71,6 +71,14 @@
       "type": "income",
       "created_at": "2022-10-28T23:09:32.411Z",
       "id": 9
+    },
+    {
+      "description": "Sacolão",
+      "price": 140,
+      "category": "Alimentação",
+      "type": "outcome",
+      "created_at": "2023-04-06T00:32:29.233Z",
+      "id": 10
     }
   ]
 }
