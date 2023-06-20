@@ -1,49 +1,38 @@
-<h1 align="center">
-  📖 Dt-Money
-</h1>
+# Dt-Money
 
-<p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/manoguii/dt-money?color=blue">
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/manoguii/dt-money?color=blue">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/manoguii/dt-money?color=blue">
-</p>
-
-<div align="left">
-  <img src="public/dt-money.png" alt="faladev" >
-</div>
-
-## Instalação
-
-- Clone o repositório
-```bash
-$ git clone https://github.com/manoguii/dt-money.git
-```
-
-- Instale as dependências
-```bash
-$ npm install
-```
-
-- Execute o banco de dados
-```bash
-$ npm run dev:server
-```
-
-- Execute a aplicação
-```bash
-$ npm run dev
-```
+<img
+  alt='Imagem do projeto'
+  src='public/dt-money.png'
+/>
 
 ## Sobre
 
-O dt-money é um projeto para gerenciar despesas e receitas. 🚀
+O dt-money é um projeto de controle financeiro para gerenciar gastos, permite criar despesas e receitas, o usuário consegue acompanhar o balanço a cada nova transação. Esse projeto usa o json server para simular um banco da dados entre outros conceitos do react.
 
+## Instalação
 
-## Tecnologias utilizadas 👩🏻‍💻
+```bash
+git clone https://github.com/manoguii/dt-money.git
+```
+
+- Para rodar o projeto localmente
+  1. Instale as dependências ```npm install```
+  2. Execute o servidor com `npm run dev:server`
+  3. Execute a aplicação. ```npm run dev```
+  4. Acesse `http://localhost:3000`
+
+## Tecnologias
+
+Algumas tecnologias utilizadas para construção da aplicação.
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com/)
+- [Radix UI](https://www.radix-ui.com/)
+- [React Hook Form](https://www.react-hook-form.com/)
+- [Zod](https://zod.dev/)
+- [JSON Server](https://github.com/typicode/json-server)
 
 ---
 
-<p align="center">Made with 💙 by Guilherme David</p>
+<center>Made with 💙 by Guilherme David</center>
